@@ -7,4 +7,12 @@ class User < ApplicationRecord
   has_many :comments
   has_many :reactions
   validates :username, uniqueness: true
+
+  def last_posts
+    self.posts[0..-2]
+  end
+
+  def last_mood
+    self.posts.last.mood
+  end
 end
