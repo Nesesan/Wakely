@@ -1,4 +1,36 @@
 <div class="container">
-  
+  <div class=" all-content my-5">
+    <div class="row">
+      <div>
+        <h1><%= @post.track_id %></h1>
+        <h2><%= @post.mood %></h2>
+      </div>
+      <div class="input-group mb-3 text-center col-6">
+        <input type="text" class="form-control" placeholder="Ajouter un commentaire" aria-label="Recipient's username"
+          aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button">></button>
+        </div>
+      </div>
+    </div>
+    <div id="comments">
 
+      <% @post.comments.each do |comment| %>
+        <div class="card card-comment">
+          <div class="card-body d-flex">
+          <img class="card-img-top img-circle rounded-circle" src="https://media.licdn.com/dms/image/D4D03AQEh19LSGxIO5w/profile-displayphoto-shrink_200_200/0/1681401337972?e=2147483647&v=beta&t=l8me4E87y2ZEbBu0hoqeTT3hs1PcPSaWEcBR4TXYu2Y" alt="Card image cap">
+            <div class="card-block">
+              <h5 class="card-title"><%= comment.user.username %></h5>
+                <p class="card-text"> <%= comment.content %> <% end %></p>
+              <h6 class="card-subtitle mb-2 text-muted"> Date commentaire</h6>
+              <%= link_to "Supprimer le commentaire"%>
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+
+  </div>
+</div>
 </div>
