@@ -4,40 +4,5 @@
 <div class="container-md">
   <h1 class="text-center">Liste des Posts</h1>
   <br>
-    <% @posts.each do |post| %>
-  <div class="post">
-    <div class="title-post">
-       <div class="profil-img-username d-flex flex-row align-items-end">
-          <img src="https://yt3.googleusercontent.com/6qGEhp2vSYQm_n0Xaby-5rgr1kW9ldtMSPafl3FTXOlYzQxaZ15Dp7DRSNNVWN3upuor1qV68Lo=s900-c-k-c0x00ffffff-no-rj" class= "img-profil" alt="sad">
-        </div>
-        <div class="profil-info">
-        <div class="user text-start">
-        <%= link_to post.user.username, user_path(post.user), class:"text-decoration-none text-dark"%>
-        </div>
-        <div class="date-time ">
-          <small><%=post.created_at%></small>
-        </div>
-        </div>
-    </div>
-        <div class="main-post border border-dark">
-          <div class="track">
-            <div class="track-picture mx-2">
-              <img src="https://upload.chien.com/img_global/24-culture/_medium-18448_9860-chanson-chien.jpg" class="img" alt="">
-            </div>
-            <div class="track-info mx-2">
-              <h5><strong>Mirza</strong></h5>
-              <h6>Nino Ferrerorocher</h6>
-            </div>
-            <div class="mood">
-              <h4>Mood: Sad</h4>
-            </div>
-          </div>
-          <div class="content mx-3">
-            <p>Fidèle au poste d'observation</p>
-          </div>
-        </div>
-        </div>
-    <%= link_to "see the post", post_path(post), class:"text-decoration-none text-dark"%>
-    <br>
-    <% end %>
+   <%=render "cardpost"%>
 </div>
