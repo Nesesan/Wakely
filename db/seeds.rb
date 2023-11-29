@@ -8,6 +8,13 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-Post.create!(mood: "Tired", track_id: "To you", user_id: 1)
-Post.create!(mood: "Angry", track_id: "Gather my tears", user_id: 1)
-Post.create!(mood: "Excited", track_id: "Super", user_id: 1)
+Post.destroy_all
+User.destroy_all
+
+bob = User.create!(email: "bob@gmail.com", password: "azerty", username: "bob")
+anne = User.create!(email: "anne@gmail.com", password: "azerty", username: "anne")
+alex = User.create!(email: "alex@gmail.com", password: "azerty", username: "alex")
+
+post1 = Post.create!(mood: "Tired", track_id: "To you", user: bob)
+post2 = Post.create!(mood: "Angry", track_id: "Gather my tears", user: anne)
+post3 = Post.create!(mood: "Excited", track_id: "Super", user: alex)
