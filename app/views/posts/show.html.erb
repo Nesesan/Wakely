@@ -8,7 +8,17 @@
       <div class="input-group mb-3 text-center col-6">
         <input type="text" class="form-control" placeholder="Ajouter un commentaire" aria-label="Recipient's username"
           aria-describedby="basic-addon2">
-        <div class="input-group-append">
+        <div class="form-inputs">
+       <%= simple_form_for @comment,
+          html: {class: "d-flex"} do |f|
+        %>
+          <%= f.input :content,
+            label: false,
+            placeholder: "Message",
+            wrapper_html: {class: "flex-grow-1"}
+          %>
+  <%= f.submit "Send", class: "btn btn-primary mb-3" %>
+<% end %>
           <button class="btn btn-outline-secondary" type="button">></button>
         </div>
       </div>
@@ -23,7 +33,7 @@
               <h5 class="card-title"><%= comment.user.username %></h5>
                 <p class="card-text"> <%= comment.content %> <% end %></p>
               <h6 class="card-subtitle mb-2 text-muted"> Date commentaire</h6>
-              <%= link_to "Supprimer le commentaire"%>
+              <%= link_to "Supprimer le commentaire", post_path(@post), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "text-decoration-none" %>
             </div>
           </div>
         </div>
