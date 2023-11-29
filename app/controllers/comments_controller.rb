@@ -1,18 +1,8 @@
 class CommentsController < ApplicationController
 
-  def index
-    @comments = Comment.all
-  end
-
-  def show
-    @comment = Comment.find(params[:id])
-    @user = User.find(@comment.user.id)
-    @post = Post.find(@comment.post.id)
-  end
-
   def create
+    @post = Post.find(params[:post_id])
     @comment = Comment.new(comment_params)
-    @post = Post.find(params[:id])
     @comment.user = current_user
     @comment.post = @post
     if @comment.save!
@@ -23,6 +13,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
+    redirect_to post_path(@comment.post)
   end
 
   private
