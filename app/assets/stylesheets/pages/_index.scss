@@ -1,2 +1,61 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "post_show";
+
+.banner {
+  text-align: center;
+  border: 1 solid black;
+  border-radius: 5px;
+}
+.container-md {
+  width: 100%;
+  height: 100%;
+  background:linear-gradient(rgb(238, 31, 31),white);
+  border: 3 solid black;
+  border-radius: 5px;
+}
+
+.post {
+  width: 100%;
+  height: 100%;
+  background-color: grey;
+  align-items: center;
+  border: 1 solid black;
+  border-radius: 5px;
+}
+
+
+.profil {
+  display:flex;
+  flex-direction: row;
+  align-items: end;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+
+.img-profil {
+  border-radius: 50%;
+  width: 50px;
+}
+
+.img {
+  width: 50px;
+  height:60px ;
+  border-radius: 5px;
+}
+
+.mood {
+  justify-content: end;
+  align-items: end;
+}
+
+.track {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding: 5px;
+}

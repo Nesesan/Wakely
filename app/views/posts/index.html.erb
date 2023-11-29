@@ -1,3 +1,35 @@
-<div class="container">
-<%= link_to "users", users_path%>
+<div class= "banner border border-dark">
+  <h1>Wakely</h1>
+</div>
+<div class="container-md">
+  <h1>Liste des Posts</h1>
+  <div class="post border border-dark">
+  <% @posts.each do |post| %>
+    <div class="profil">
+       <div class="profil-img-username d-flex flex-row align-items-end">
+        <img src="https://yt3.googleusercontent.com/6qGEhp2vSYQm_n0Xaby-5rgr1kW9ldtMSPafl3FTXOlYzQxaZ15Dp7DRSNNVWN3upuor1qV68Lo=s900-c-k-c0x00ffffff-no-rj" class= "img-profil" alt="sad">
+        <h4><%= link_to post.user.username, user_path(post.user), class:"text-decoration-none text-dark"%></h4>
+      </div>
+      <div class="mood">
+        <h4>Mood: Sad</h4>
+      </div>
+    </div>
+    <div class="track">
+      <div class="track-picture">
+        <img src="https://upload.chien.com/img_global/24-culture/_medium-18448_9860-chanson-chien.jpg" class="img" alt="">
+      </div>
+      <div class="track-info">
+        <h5><strong>Mirza</strong></h5>
+        <h5>Nino Ferrerorocher</h5>
+      </div>
+      <div class="content">
+        <p>Comment: Ah fidèle au poste d'observation</p>
+      </div>
+      </div>
+      <div class="date-time ">
+        <%=post.created_at%>
+      </div>
+    </div>
+    <%= link_to "see the post", post_path(post), class:"text-decoration-none text-dark"%>
+    <% end %>
 </div>
