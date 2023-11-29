@@ -1,25 +1,23 @@
 .card {
   border-radius: 15px;
-  border-color: #ffffff;
+  border-color: #E5E0E6;
   backdrop-filter: blur(10px);
-  background-color: rgba(239, 239, 239, 0.6);
+  background-color: rgba(226, 231, 223, 0.6);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 
 body {
-    background: linear-gradient(-45deg, #ebe9e9, #d2d2d2, #e9f9f9, #fffafa);
-    background-size: 400% 400%;
-    animation: gradient 10s ease infinite;
+    background: white;
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+.main-post{
+  border-radius: 15px;
+  border-color: #000000;
+}
+.title-post{
+  border-radius: 15px;
+}
+.track {
+  border-radius: 15px;
 }

@@ -8,8 +8,6 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-
-
 Post.create!(mood: "Tired", track_id: "To you", user_id: 1)
 Post.create!(mood: "Angry", track_id: "Gather my tears", user_id: 1)
 Post.create!(mood: "Excited", track_id: "Super", user_id: 1)
