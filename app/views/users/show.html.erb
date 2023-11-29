@@ -1,9 +1,12 @@
-<div class="w-10 col-2 justify-content-center d-flex mt-3">
+<div class="container py-3 h-100 mb-2">
+<div class="d-flex justify-content-between mb-3">
   <%= link_to root_path, class: "return-arrow" do %>
   <%= image_tag("https://cdn0.iconfinder.com/data/icons/entypo/46/chevron4-1024.png", size: "20x20", class: "responsive-image") %>
   <% end %>
+
+  <%=link_to "log out", root_path, class: "text-decoration-none text-dark"%>
+
 </div>
-<div class="container py-3 h-100 mb-2">
   <div class="row d-flex justify-content-center align-items-center h-100">
     <div class="col-md-12 col-xl-4">
       <div class="card">

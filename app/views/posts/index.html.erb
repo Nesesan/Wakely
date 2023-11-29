@@ -5,14 +5,16 @@
   <h1 class="text-center">Liste des Posts</h1>
   <br>
    <%=render "cardpost"%>
+   <br>
+   <br>
 </div>
  <nav class="navbar fixed-bottom bg-success" data-bs-theme="dark">
   <div class="container-fluid d-flex justify-content-around">
 
-  <%= link_to root_path, class: "navbar-brand" do %>
+  <%= link_to user_path(current_user), class: "navbar-brand" do %>
     <%= image_tag "https://yt3.googleusercontent.com/6qGEhp2vSYQm_n0Xaby-5rgr1kW9ldtMSPafl3FTXOlYzQxaZ15Dp7DRSNNVWN3upuor1qV68Lo=s900-c-k-c0x00ffffff-no-rj", height: '40', width:'40',class:"rounded-circle" %>
   <% end %>
-  <%= link_to root_path, class: "navbar-brand ml-3" do %>
+  <%= link_to root_path , class: "navbar-brand ml-3" do %>
   <button type="button" class="btn cube cube-hover">
   <div class="bg-top">
   <div class="bg-inner"></div>
