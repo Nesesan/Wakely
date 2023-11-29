@@ -8,15 +8,6 @@ class UsersController < ApplicationController
     @last_posts = @user.last_posts
   end
 
-  def user_avatar
-    user = User.find!(user_id)
-    if user.avatar.attached?
-      image_tag user.avatar
-    else
-      image_tag 'default_avatar.jpg'
-    end
-  end
-
   def params_user
     params.require(:users).permit(:username)
   end
