@@ -1,0 +1,25 @@
+.card {
+  border-radius: 15px;
+  border-color: #ffffff;
+  backdrop-filter: blur(10px);
+  background-color: rgba(239, 239, 239, 0.6);
+}
+
+
+body {
+    background: linear-gradient(-45deg, #ebe9e9, #d2d2d2, #e9f9f9, #fffafa);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
