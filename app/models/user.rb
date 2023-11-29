@@ -12,7 +12,7 @@ class User < ApplicationRecord
     self.posts[0..-2]
   end
 
-  def last_mood
-    self.posts.last.mood
+  def last_post_day
+    self.posts.last
   end
 end
