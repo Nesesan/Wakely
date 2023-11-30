@@ -43,7 +43,7 @@
   </div>
 
   <div class="row d-flex justify-content-center align-items-center h-100 p-3">
-    <div class="form-inputs">
+    <div class="input-group">
       <%= simple_form_for [@post, @comment],
           html: {class: "d-flex"} do |f|
         %>
@@ -52,7 +52,7 @@
             placeholder: "Commentaire",
             wrapper_html: {class: "flex-grow-1"}
           %>
-      <%= f.submit "Send", class: "btn btn-primary mb-3" %>
+      <%= f.submit "Send", class: "btn btn-outline-secondary mb-3" %>
       <% end %>
     </div>
   </div>
