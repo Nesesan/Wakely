@@ -1,46 +1,37 @@
 <div class="container">
-  <div class="row w-10 col-2 justify-content-center d-flex mt-3">
-    <%= link_to root_path, class: "return-arrow" do %>
-    <%= image_tag("https://cdn0.iconfinder.com/data/icons/entypo/46/chevron4-1024.png", size: "20x20", class: "responsive-image") %>
-    <% end %>
-  </div>
-  <div class="row d-flex justify-content-center align-items-center h-100 p-3">
-    <div class="post">
-      <div class="title-post">
-        <div class="profil-img-username d-flex flex-row align-items-end">
-          <img
-            src="https://yt3.googleusercontent.com/6qGEhp2vSYQm_n0Xaby-5rgr1kW9ldtMSPafl3FTXOlYzQxaZ15Dp7DRSNNVWN3upuor1qV68Lo=s900-c-k-c0x00ffffff-no-rj"
-            class="img-profil" alt="sad">
+ <div class="post">
+    <div class="title-post">
+       <div class="profil-img-username d-flex flex-row align-items-end">
+          <img src="https://yt3.googleusercontent.com/6qGEhp2vSYQm_n0Xaby-5rgr1kW9ldtMSPafl3FTXOlYzQxaZ15Dp7DRSNNVWN3upuor1qV68Lo=s900-c-k-c0x00ffffff-no-rj" class= "img-profil" alt="sad">
         </div>
         <div class="profil-info">
-          <div class="user text-start">
-            <%= link_to @post.user.username, user_path(@post.user), class:"text-decoration-none text-dark"%>
-          </div>
-          <div class="date-time ">
-            <small><%=@post.created_at%></small>
-          </div>
+        <div class="user text-start">
+        <%= link_to @post.user.username, user_path(@post.user), class:"text-decoration-none text-dark"%>
         </div>
-      </div>
-      <div class="main-post border border-dark">
-        <div class="track">
-          <div class="track-picture mx-2">
-            <img src="https://upload.chien.com/img_global/24-culture/_medium-18448_9860-chanson-chien.jpg" class="img"
-              alt="">
-          </div>
-          <div class="track-info mx-2">
-            <h5><strong>Mirza</strong></h5>
-            <h6>Nino Ferrerorocher</h6>
-          </div>
-          <div class="mood">
-            <h4>Mood: Sad</h4>
-          </div>
+        <div class="mood">
+        <%= link_to "Mood: Sad", post_path(@post), class:"text-decoration-none text-dark"%>
         </div>
-        <div class="content mx-3">
-          <p>Fidèle au poste d'observation</p>
         </div>
-      </div>
     </div>
-  </div>
+        <div class="main-post border border-dark">
+          <div class="track">
+            <div class="track-picture mx-2">
+              <img src="https://upload.chien.com/img_global/24-culture/_medium-18448_9860-chanson-chien.jpg" class="img" alt="">
+            </div>
+            <div class="track-info mx-2">
+              <h5><strong>Mirza</strong></h5>
+              <h6>Nino Ferrerorocher</h6>
+            </div>
+          </div>
+          <div class="content mx-3">
+            <p>Fidèle au poste d'observation</p>
+          </div>
+        </div>
+        </div>
+        <div class="date-time mx-1 ">
+          <small><%=@post.created_at%></small>
+        </div>
+    <br>
 
   <div class="row d-flex justify-content-center align-items-center h-100 p-3">
     <div class="form-inputs">
@@ -52,7 +43,7 @@
             placeholder: "Commentaire",
             wrapper_html: {class: "flex-grow-1"}
           %>
-      <%= f.submit "Send", class: "btn btn-outline-secondary mb-3 col-1" %>
+      <%= f.submit "Send", class: "btn btn-outline-secondary mb-3" %>
       <% end %>
     </div>
   </div>
