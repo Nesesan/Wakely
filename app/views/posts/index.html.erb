@@ -1,5 +1,5 @@
 <div class= "banner border border-dark">
-<%= image_tag("wakely-logo.jpeg", :alt => "logo wakely")%>
+<%= image_tag("wakely-logo.jpeg", :alt => "logo wakely", size: "400x200")%>
 </div>
 <div class="container-md">
   <h1 class="text-center">Liste des Posts</h1>
@@ -8,7 +8,7 @@
    <br>
    <br>
 </div>
- <nav class="navbar fixed-bottom bg-success" data-bs-theme="dark">
+ <nav class="navbar fixed-bottom" data-bs-theme="dark">
   <div class="container-fluid d-flex justify-content-around">
 
   <%= link_to user_path(current_user), class: "navbar-brand" do %>
@@ -44,5 +44,4 @@
 </button>
   <% end %>
   </div>
-  <!-- Navbar content -->
 </nav>
