@@ -1,46 +1,45 @@
-<div class= "banner border border-dark ">
+<div class="banner ">
+  <h1 class= "wakely-font">Wakely</h1>
 </div>
 <div class="container-md">
-  <h1 class="text-center">Liste des Posts</h1>
+  <%=render "cardpost"%>
   <br>
-   <%=render "cardpost"%>
-   <br>
-   <br>
+  <br>
 </div>
- <nav class="navbar fixed-bottom" data-bs-theme="dark">
+<nav class="navbar fixed-bottom" data-bs-theme="dark">
   <div class="container-fluid d-flex justify-content-around">
 
-  <%= link_to user_path(current_user), class: "navbar-brand" do %>
+    <%= link_to user_path(current_user), class: "navbar-brand" do %>
     <%= image_tag "https://yt3.googleusercontent.com/6qGEhp2vSYQm_n0Xaby-5rgr1kW9ldtMSPafl3FTXOlYzQxaZ15Dp7DRSNNVWN3upuor1qV68Lo=s900-c-k-c0x00ffffff-no-rj", height: '40', width:'40',class:"rounded-circle" %>
-  <% end %>
-  <%= link_to root_path , class: "navbar-brand ml-3" do %>
-  <button type="button" class="btn cube cube-hover">
-  <div class="bg-top">
-  <div class="bg-inner"></div>
-  </div>
-  <div class="bg-right">
-  <div class="bg-inner"></div>
-  </div>
-  <div class="bg">
-  <div class="bg-inner"></div>
-  </div>
-  <div class="text">Add</div>
-</button>
-  <%end%>
-
-  <%= link_to root_path, class: "navbar-brand" do %>
+    <% end %>
+    <%= link_to root_path , class: "navbar-brand ml-3" do %>
     <button type="button" class="btn cube cube-hover">
-  <div class="bg-top">
-  <div class="bg-inner"></div>
-  </div>
-  <div class="bg-right">
-  <div class="bg-inner"></div>
-  </div>
-  <div class="bg">
-  <div class="bg-inner"></div>
-  </div>
-  <div class="text">Amis</div>
-</button>
-  <% end %>
+      <div class="bg-top">
+        <div class="bg-inner"></div>
+      </div>
+      <div class="bg-right">
+        <div class="bg-inner"></div>
+      </div>
+      <div class="bg">
+        <div class="bg-inner"></div>
+      </div>
+      <div class="wakely-font text">Add</div>
+    </button>
+    <%end%>
+
+    <%= link_to root_path, class: "navbar-brand" do %>
+    <button type="button" class="btn cube cube-hover">
+      <div class="bg-top">
+        <div class="bg-inner"></div>
+      </div>
+      <div class="bg-right">
+        <div class="bg-inner"></div>
+      </div>
+      <div class="bg">
+        <div class="bg-inner"></div>
+      </div>
+      <div class="wakely-font text">Amis</div>
+    </button>
+    <% end %>
   </div>
 </nav>
