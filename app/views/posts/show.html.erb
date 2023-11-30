@@ -1,5 +1,8 @@
 <div class="container">
- <div class="post">
+<%= link_to root_path, class: "return-arrow" do %>
+    <%= image_tag("https://cdn0.iconfinder.com/data/icons/entypo/46/chevron4-1024.png", size: "20x20", class: "responsive-image") %>
+    <% end %>
+ <div class="post mt-4">
     <div class="title-post">
        <div class="profil-img-username d-flex flex-row align-items-end">
           <img src="https://yt3.googleusercontent.com/6qGEhp2vSYQm_n0Xaby-5rgr1kW9ldtMSPafl3FTXOlYzQxaZ15Dp7DRSNNVWN3upuor1qV68Lo=s900-c-k-c0x00ffffff-no-rj" class= "img-profil" alt="sad">
@@ -43,7 +46,7 @@
             placeholder: "Commentaire",
             wrapper_html: {class: "flex-grow-1"}
           %>
-      <%= f.submit "Send", class: "btn btn-outline-secondary mb-3" %>
+      <%= f.submit "Envoyer", class: "btn btn-outline-secondary mb-3" %>
       <% end %>
     </div>
   </div>
