@@ -1,23 +1,74 @@
-.card {
+.card-body {
   border-radius: 15px;
-  border-color: #E5E0E6;
-  backdrop-filter: blur(10px);
-  background-color: rgba(226, 231, 223, 0.6);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  background-color: white;
+}
+.main-post, .title-post, .track {
+  border-radius: 15px;
+}
+.png {
+  color: rgb(5, 65, 65);
+}
+.Btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: rgb(5, 65, 65);
+}
+/* plus sign */
+.sign {
+  width: 100%;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-body {
-    background: white;
+.sign svg {
+  width: 17px;
 }
 
-.main-post{
-  border-radius: 15px;
-  border-color: #000000;
+.sign svg path {
+  fill: white;
 }
-.title-post{
-  border-radius: 15px;
+/* text */
+.text-test {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 400;
+  transition-duration: .3s;
 }
-.track {
-  border-radius: 15px;
+/* hover effect on button width */
+.Btn:hover {
+  width: 125px;
+  border-radius: 40px;
+  transition-duration: .3s;
+}
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: .3s;
+  padding-left: 20px;
+}
+/* hover effect button's text */
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: .3s;
+  padding-right: 10px;
+}
+/* button click effect*/
+.Btn:active {
+  transform: translate(2px ,2px);
 }
