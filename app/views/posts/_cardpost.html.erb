@@ -8,8 +8,8 @@
         <div class="user text-start">
         <%= link_to post.user.username, user_path(post.user), class:"text-decoration-none text-dark"%>
         </div>
-        <div class="date-time ">
-          <small><%=post.created_at%></small>
+        <div class="mood">
+        <%= link_to "Mood: Sad", post_path(post), class:"text-decoration-none text-dark"%>
         </div>
         </div>
     </div>
@@ -22,15 +22,14 @@
               <h5><strong>Mirza</strong></h5>
               <h6>Nino Ferrerorocher</h6>
             </div>
-            <div class="mood">
-              <h4>Mood: Sad</h4>
-            </div>
           </div>
           <div class="content mx-3">
             <p>Fidèle au poste d'observation</p>
           </div>
         </div>
         </div>
-    <%= link_to "see the post", post_path(post), class:"text-decoration-none text-dark"%>
+        <div class="date-time mx-1 ">
+          <small><%=post.created_at%></small>
+        </div>
     <br>
     <% end %>
