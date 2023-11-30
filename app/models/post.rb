@@ -4,4 +4,5 @@ class Post < ApplicationRecord
   has_many :reactions
   validates :mood, presence: true
   MOODS = %i[]
+  
 end
