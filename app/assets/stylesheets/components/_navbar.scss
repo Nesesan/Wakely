@@ -5,4 +5,14 @@
   width: 55%;
   height: 8%;
   margin-bottom: 4px;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px solid ;
+}
+
+. {
+  background-color: black;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
 }

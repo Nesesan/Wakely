@@ -18,6 +18,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
+    raise
     @post.destroy
   end
 

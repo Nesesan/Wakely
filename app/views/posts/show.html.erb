@@ -35,6 +35,11 @@
         <div class="date-time mx-1 ">
           <small><%=@post.created_at%></small>
         </div>
+        <%= link_to "x", post_path(@post), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn button-rounded btn-dark rounded-circle" %>
+        </div>
+
+
+
         </div>
     <br>
 
