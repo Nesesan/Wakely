@@ -1,5 +1,5 @@
 <div class="banner ">
-  <h1 class= "wakely-font">Wakely</h1>
+  <h1 class="wakely-font">Wakely</h1>
 </div>
 <div class="container-md">
   <%=render "cardpost"%>
@@ -7,7 +7,7 @@
   <br>
 </div>
 <nav class="navbar fixed-bottom" data-bs-theme="dark">
-  <div class="container-fluid d-flex justify-content-around">
+  <div class="container-fluid d-flex justify-content-start">
 
     <%= link_to user_path(current_user), class: "navbar-brand" do %>
     <%= image_tag "https://yt3.googleusercontent.com/6qGEhp2vSYQm_n0Xaby-5rgr1kW9ldtMSPafl3FTXOlYzQxaZ15Dp7DRSNNVWN3upuor1qV68Lo=s900-c-k-c0x00ffffff-no-rj", height: '40', width:'40',class:"rounded-circle" %>
@@ -23,10 +23,13 @@
       <div class="bg">
         <div class="bg-inner"></div>
       </div>
-      <div class="wakely-font text">Add</div>
+      <div class="wakely-font text-white">Add</div>
     </button>
     <%end%>
+  </div>
+</nav>
 
+<!--
     <%= link_to root_path, class: "navbar-brand" do %>
     <button type="button" class="btn cube cube-hover">
       <div class="bg-top">
@@ -38,7 +41,7 @@
       <div class="bg">
         <div class="bg-inner"></div>
       </div>
-      <div class="wakely-font text">Amis</div>
+      <div class="wakely-font text-white">Amis</div>
     </button>
     <% end %>
   </div>
