@@ -5,6 +5,9 @@
 .main-post, .title-post, .track {
   border-radius: 15px;
 }
+.png {
+  color: rgb(5, 65, 65);
+}
 .Btn {
   display: flex;
   align-items: center;
@@ -37,7 +40,7 @@
   fill: white;
 }
 /* text */
-.text {
+.text-test {
   position: absolute;
   right: 0%;
   width: 0%;
