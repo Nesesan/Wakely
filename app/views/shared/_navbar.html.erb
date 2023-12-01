@@ -1,8 +1,11 @@
-<nav class="navbar navbar-light fixed-bottom ">
-
-  <%= link_to user_path(current_user) do%-->
-<i class="fa-solid fa-user-group ml-3" style="color: white;"></i>
-<% end %>
-
-<%= link_to "+", posts_path, class: "add-post-button" %>
+<nav class="navbar navbar-light fixed-bottom">
+  <% if user_signed_in? %>
+  <%= link_to user_path(current_user) do %>
+  <%= image_tag("sad.jpeg", :alt => "logo sad",size: "60x60", class:"rounded-circle")%>
+  <% end %>
+  <%= link_to "+", posts_path, class: "add-post-button" %>
+    <%= link_to user_path(current_user) do%>
+      <i class="fa-solid fa-user-group ml-3" style="color: white;"></i>
+    <% end %>
+  <% end %>
 </nav>
