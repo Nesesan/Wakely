@@ -19,4 +19,6 @@ Rails.application.routes.draw do
   resources :comments, only: [:destroy]
   resources :reactions, only: [:destroy]
   resources :posts, only: [:destroy]
+
+  get 'search_music', to: "posts#search_music"
 end

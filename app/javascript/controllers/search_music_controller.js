@@ -7,7 +7,6 @@ export default class extends Controller {
   getTracks(e) {
     this.ulTarget.innerHTML = ""
     if (e.code == "Space") {
-      console.log("hello")
       const trackSearch = e.currentTarget.value
       const searchUrl = this.element.dataset.searchMusicValue
       this.#searchTrack(trackSearch, searchUrl)
