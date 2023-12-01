@@ -22,7 +22,7 @@ export default class extends Controller {
         const name = track.name
         const artist = track.artists[0].name
         const cover = track.album.images[2]
-        const trackId = track.uri
+        const trackId = track.id
         this.#insertTracks(name, artist, cover, trackId)
       });
       this.#fillSearchInput()
