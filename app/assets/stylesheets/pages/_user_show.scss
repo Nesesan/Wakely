@@ -5,9 +5,6 @@
 .main-post, .title-post, .track {
   border-radius: 15px;
 }
-.png {
-  color: rgb(5, 65, 65);
-}
 .Btn {
   display: flex;
   align-items: center;
@@ -45,7 +42,7 @@
   right: 0%;
   width: 0%;
   opacity: 0;
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 1.2em;
   font-weight: 400;
   transition-duration: .3s;
@@ -56,13 +53,14 @@
   border-radius: 40px;
   transition-duration: .3s;
 }
+
 .Btn:hover .sign {
   width: 30%;
   transition-duration: .3s;
   padding-left: 20px;
 }
 /* hover effect button's text */
-.Btn:hover .text {
+.Btn:hover .text-test {
   opacity: 1;
   width: 70%;
   transition-duration: .3s;

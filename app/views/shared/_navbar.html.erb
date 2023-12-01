@@ -1,5 +1,8 @@
-<nav class="navbar navbar-light fixed-bottom">
-  <img src="" alt="profil-user">
+<nav class="navbar navbar-light fixed-bottom ">
 
-  <%=link_to "Add", posts_path, class: "btn button-rounded btn-dark rounded-circle"%>
+  <%= link_to user_path(current_user) do%-->
+<i class="fa-solid fa-user-group ml-3" style="color: white;"></i>
+<% end %>
+
+<%= link_to "+", posts_path, class: "add-post-button" %>
 </nav>
