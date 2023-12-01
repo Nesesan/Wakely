@@ -19,8 +19,8 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
-    raise
     @post.destroy
+    redirect_to posts_path
   end
 
   def search_music
