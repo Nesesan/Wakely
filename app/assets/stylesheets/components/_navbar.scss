@@ -1,37 +1,42 @@
 .navbar {
+
+
   background-color: rgba(32, 32, 32, 0.8);
+
   margin: auto;
   width: 100%;
   height: 8%;
 }
+
 .add-post-button {
-color: white;
-font-size:36px;
-width:50px;
-height:50px;
-text-decoration: none;
+  color: white;
+  font-size: 36px;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
 }
+
 .fa-solid {
   font-size: 28px;
-
-
   margin-right: 18px;
-
   color: white;
 }
-.rounded-circle{
+
+.rounded-circle {
   font-size: 32px;
   margin-left: 25px;
-  width:50px;
-  height:50px;
+  width: 50px;
+  height: 50px;
 }
+
 .fa-user {
   color: white;
 }
-.fa-house {
-margin-left: 23px;
-}
-.fa-user-group{
-  margin-right: 25px;
 
+.fa-house {
+  margin-left: 23px;
+}
+
+.fa-user-group {
+  margin-right: 25px;
 }
