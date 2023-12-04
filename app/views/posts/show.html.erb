@@ -55,6 +55,7 @@
   </div>
 </div>
 
+
 <div class="container mb-5">
   <div class="row d-flex justify-content-center align-items-center h-100 p-3 m-1">
     <% @post.comments.each do |comment| %>
@@ -67,8 +68,22 @@
           <h5 class="card-title"><%= comment.user.username %></h5>
           <h4 class="comment-text card-text font-weight-bold"> <%= comment.content %></h4>
           <h6 class="date-comment card-subtitle mb-2 font-weight-light font-italic text-lowercase">Date commentaire</h6>
+
+  <div class="container mb-5">
+    <div class="row d-flex justify-content-center align-items-center h-100 p-3 m-1">
+      <% @post.comments.each do |comment| %>
+      <div class="comment block flex-wrap">
+        <div class="d-flex">
+          <img class="card-img-top img-circle rounded-circle"
+            src="https://media.licdn.com/dms/image/D4D03AQEh19LSGxIO5w/profile-displayphoto-shrink_200_200/0/1681401337972?e=2147483647&v=beta&t=l8me4E87y2ZEbBu0hoqeTT3hs1PcPSaWEcBR4TXYu2Y"
+            alt="Card image cap">
+          <div class="card-block">
+            <h5 class="user-comment card-title"><%= comment.user.username %></h5>
+            <h4 class="comment-text card-text font-weight-bold"> <%= comment.content %></h4>
+            <h6 class="date-time card-subtitle"><%= comment.created_at %></h6>
+
         </div>
-      </div>
+      </div class="d-flex justify-content-start">
       <%= link_to "x", comment_path(comment), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn button-rounded btn-dark rounded-circle" %>
     </div>
     <% end %>

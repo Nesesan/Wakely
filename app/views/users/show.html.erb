@@ -35,7 +35,8 @@
       <h6 class="wakely-font justify-content-center d-flex"><strong>Dernier post</strong></h6>
       <div class="card ">
         <div class="card-body text-center">
-          <%=@user.last_post_day %>
+          <%=@user.last_post_day.content %>
+          <%=@user.last_post_day.mood %>
         </div>
       </div>
     </div>

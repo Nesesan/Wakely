@@ -1,15 +1,32 @@
 .comment {
-  border-bottom: 1px solid rgb(5, 65, 65);
+  border-bottom: 1px solid #202020;
   margin-bottom: 50px;
   justify-content: space-between;
   align-items: start;
   display: flex;
+  padding-top: 20px;
 }
 
 .comment-text {
   font-style: bold;
+  margin-bottom: 7px;
+  font-size: 20px;
 }
 
-.date-comment {
-  font-style: italic;
+.date-time {
+  color: black;
+  font-size: xx-small;
+}
+
+.user-comment {
+  font-size: larger;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-style: bold;
+  color: white;
+}
+
+.add_comment {
+  color: white;
+  font-size: smaller;
 }

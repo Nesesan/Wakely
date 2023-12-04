@@ -5,13 +5,12 @@
 .container-md {
   width: 100%;
   height: 100%;
-  border: 3 solid rgb(5, 65, 65);
   border-radius: 5px;
 }
 .main-post {
-  background-color: rgba(0, 0, 0,0.8);
+  background-color: rgba(26, 26, 26, 0.8);
   border-radius: 15px;
-  border-color: #000000;
+
 }
 .title-post {
   display: flex;
@@ -19,7 +18,6 @@
   width: 100%;
   height: 100%;
   align-items: center;
-  border: 1 solid rgb(5, 65, 65);
   border-radius: 5px;
 }
 .profil {
@@ -28,7 +26,7 @@
   align-items: end;
   width: 100%;
   height: 100%;
-  background-color: rgb(55, 0, 0);
+  background-color: black;
   justify-content: space-between;
   padding: 5px;
 }
@@ -41,7 +39,6 @@
   width: 40px;
   height: 40px;
 }
-
 
 .img {
   width: 50px;
@@ -56,19 +53,48 @@
   display: flex;
   border-radius: 15px;
   flex-direction: row;
-  background-color: rgba(0, 0, 0,0.8);
   padding: 5px;
 }
 .card {
   border-radius: 15px;
   backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: #202020;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 .title-post{
   border-radius: 15px;
+  margin-bottom: 5px;
+  margin-top: 20px;
 }
 .post{
   border-radius: 15px;
+}
 
+.content-post {
+  padding-top: 10px;
+  margin-bottom: 5px;
+}
+
+body {
+  /* Prevent the user selecting text in the example */
+  user-select: none;
+}
+
+div.scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  background-color: #000000;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
 }
