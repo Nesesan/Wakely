@@ -19,9 +19,9 @@
   </div>
 <h1 class= "wakely-font my-2">Wakely</h1>
 </div>
-<div class="scrollmenu ">
+<div class="scrollmenu mx-3 wakely-font">
   <% Post::MOODS.each do |mood|  %>
-    <%=link_to mood, posts_path(mood: mood) %>
+    <%=link_to mood, posts_path(mood: mood), class:"a-link" %>
   <% end %>
 </div>
 <div class="container-md">
@@ -29,4 +29,3 @@
   <br>
   <br>
 </div>
-
