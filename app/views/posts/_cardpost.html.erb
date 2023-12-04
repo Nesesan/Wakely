@@ -29,5 +29,8 @@
         <div class="date-time mx-1 wakely-font ">
           <h6> <small><%=post.created_at.strftime('%d/%m/%Y - %H:%M:%S')%></small></h6>
         </div>
+        <div>
+        <h4><%= link_to "Ajouter un commentaire", post_path(post), class:"add_comment"%></h4>
+        </div>
     <br>
     <% end %>
