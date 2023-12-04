@@ -19,7 +19,7 @@
     </div>
         <div class="main-post border border-dark">
         <div class="content mx-3">
-            <p class= "wakely-font"><%= post.content %></p>
+            <p class= "wakely-font content-post"><%= post.content %></p>
           </div>
           <div class="track">
           <iframe style="border-radius:12px" src=<%="https://open.spotify.com/embed/track/#{post.track_id}?utm_source=generator"%> width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -28,6 +28,9 @@
         </div>
         <div class="date-time mx-1 wakely-font ">
           <h6> <small><%=post.created_at.strftime('%d/%m/%Y - %H:%M:%S')%></small></h6>
+        </div>
+        <div>
+        <h4><%= link_to "Ajouter un commentaire", post_path(post), class:"add_comment"%></h4>
         </div>
     <br>
     <% end %>
