@@ -8,10 +8,18 @@
 }
 .add-post-button {
 color: white;
-border-color:white;
-font-size:24px;
+font-size:36px;
 width:50px;
 height:50px;
-border-radius:50%;
 text-decoration: none;
+}
+.fa-solid {
+  font-size: 28px;
+  margin-right: 25px
+}
+.rounded-circle{
+  font-size: 32px;
+  margin-left: 25px;
+  width:50px;
+  height:50px;
 }
