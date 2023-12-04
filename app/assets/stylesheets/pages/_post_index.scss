@@ -72,3 +72,27 @@
   border-radius: 15px;
 
 }
+
+body {
+  /* Prevent the user selecting text in the example */
+  user-select: none;
+}
+
+div.scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  background-color: #000000;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
+}
