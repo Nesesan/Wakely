@@ -88,11 +88,12 @@ div.scrollmenu a {
   display: inline-block;
   color: white;
   text-align: center;
-  padding: 14px;
   text-decoration: none;
-  border-radius: 50%;
+  border-radius: 12px;
+  border: 1px solid ;
+  padding:8px 12px;
 }
 
-div.scrollmenu a:hover {
-  background-color: #777;
+div.scrollmenu a:focus {
+  background-color:#3C1742;
 }

@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = params[:mood] ? Post.where(mood: params[:mood]) : Post.all
     @post = Post.new
   end
 

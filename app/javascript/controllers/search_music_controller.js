@@ -37,7 +37,7 @@ export default class extends Controller {
         <span class="d-none track-id">${trackId}</span>
       </li>
     `
-    this.ulTarget.insertAdjacentHTML("beforeend", li)
+    this.ulTarget.insertAdjacentHTML("afterbegin", li)
   }
 
   #fillSearchInput() {
