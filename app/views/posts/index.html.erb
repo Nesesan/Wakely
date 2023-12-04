@@ -1,13 +1,46 @@
 <div class="banner ">
-  <h1 class="wakely-font">Wakely</h1>
+
+<!-- Modal -->
+  <div class="modal custom fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Partage ta musique</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%= render "post_form" %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<%=image_tag("logo-wakely.png", size: "80x80") %>
 </div>
-  <%= render "posts/post_form", post: @post %>
+<div class="scrollmenu ">
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+  <a href="#support">Support</a>
+  <a href="#blog">Blog</a>
+  <a href="#tools">Tools</a>
+  <a href="#base">Base</a>
+  <a href="#custom">Custom</a>
+  <a href="#more">More</a>
+  <a href="#logo">Logo</a>
+  <a href="#friends">Friends</a>
+  <a href="#partners">Partners</a>
+  <a href="#people">People</a>
+  <a href="#work">Work</a>
+</div>
 <div class="container-md">
   <%= render "cardpost"%>
   <br>
   <br>
 </div>
-
 
 
 <!--
