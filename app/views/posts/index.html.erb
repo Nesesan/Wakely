@@ -17,24 +17,12 @@
       </div>
     </div>
   </div>
-
-<%=image_tag("logo-wakely.png", size: "80x80") %>
+<h1 class= "wakely-font my-2">Wakely</h1>
 </div>
 <div class="scrollmenu ">
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-  <a href="#support">Support</a>
-  <a href="#blog">Blog</a>
-  <a href="#tools">Tools</a>
-  <a href="#base">Base</a>
-  <a href="#custom">Custom</a>
-  <a href="#more">More</a>
-  <a href="#logo">Logo</a>
-  <a href="#friends">Friends</a>
-  <a href="#partners">Partners</a>
-  <a href="#people">People</a>
-  <a href="#work">Work</a>
+  <% Post::MOODS.each do |mood|  %>
+    <%=link_to mood, posts_path(mood: mood) %>
+  <% end %>
 </div>
 <div class="container-md">
   <%= render "cardpost"%>

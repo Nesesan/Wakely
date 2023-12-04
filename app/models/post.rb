@@ -5,5 +5,5 @@ class Post < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :reactions
   validates :mood, presence: true
-  MOODS = %i[😁Heureux 😔Triste 🥳Joyeux 🥹Emotif 😒Exaspéré 😠Colère]
+  MOODS = %i[😁Heureux 😔Triste 🥳Joyeux 🥹Emotif 😒Exaspéré 😡Colère 😴Endormi 🤔Pensif 🥶Froid ]
 end
