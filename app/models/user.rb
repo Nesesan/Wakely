@@ -9,7 +9,7 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
 
   def last_posts
-    self.posts[0..-2]
+    self.posts[0..-1]
   end
 
   def last_post_day
