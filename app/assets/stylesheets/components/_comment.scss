@@ -1,5 +1,4 @@
 .comment {
-  border-bottom: 1px solid #202020;
   margin-bottom: 50px;
   justify-content: space-between;
   align-items: start;
@@ -14,7 +13,7 @@
 }
 
 .date-time {
-  color: black;
+  color: #808080;
   font-size: xx-small;
   text-align: right;
   font-size: xx-small;
@@ -32,4 +31,23 @@
   color: white;
   font-size: smaller;
   text-align: right;
+}
+
+.link-supp {
+  color: white;
+  text-align: end;
+}
+
+.comment-user {
+  color: white;
+  font-size: smaller;
+  margin-bottom: 5px;
+}
+
+.comment-text {
+  color: white;
+}
+
+.img-comment {
+  size: 50%;
 }

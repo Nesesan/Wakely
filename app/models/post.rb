@@ -3,7 +3,7 @@ class Post < ApplicationRecord
 
   belongs_to :user
   has_many :comments, dependent: :destroy
-  has_many :reactions
+  has_many :reactions, dependent: :destroy
   validates :mood, presence: true
   MOODS = %i[😁 😔 🥳].freeze
 end

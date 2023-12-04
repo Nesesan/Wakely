@@ -1,6 +1,5 @@
 .card-body {
   border-radius: 15px;
-  background-color: rgba(0, 0, 0, 0.8);
 }
 .main-post, .title-post, .track {
   border-radius: 15px;
@@ -53,7 +52,7 @@
   right: 0%;
   width: 0%;
   opacity: 0;
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 1.2em;
   font-weight: 400;
   transition-duration: .3s;
@@ -64,6 +63,7 @@
   border-radius: 40px;
   transition-duration: .3s;
 }
+
 .Btn:hover .sign {
   width: 30%;
   transition-duration: .3s;
