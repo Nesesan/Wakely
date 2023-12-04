@@ -1,11 +1,16 @@
 <nav class="navbar fixed-bottom d-flex justify-content-between">
   <% if user_signed_in? %>
+  <%= link_to posts_path do %>
+  <i class="fa-solid fa-house"></i>
+   <% end %>
   <%= link_to user_path(current_user) do %>
-  <%= image_tag("sad.jpeg", :alt => "logo sad", class:"rounded-circle")%>
+  <i class="fa-solid fa-user"></i>
+   <% end %>
+  <%= link_to posts_path do%>
+  <i class="fa-solid fa-plus"></i>
   <% end %>
-  <%= link_to "+", posts_path, class: "add-post-button" %>
-    <%= link_to user_path(current_user) do%>
-      <i class="fa-solid fa-user-group" style="color: white"></i>
-    <% end %>
+  <%= link_to user_path(current_user) do%>
+  <i class="fa-solid fa-user-group" ></i>
   <% end %>
+<% end %>
 </nav>
