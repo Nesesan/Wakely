@@ -1,6 +1,5 @@
 <div class="container">
 <h2 class="text-center"> Log in</h2>
-<%= image_tag("wakely-logo.jpeg", :alt => "logo wakely",size: "360x150")%>
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
     <%= f.input :email,
