@@ -9,9 +9,9 @@
   border-radius: 5px;
 }
 .main-post {
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0,0.8);
   border-radius: 15px;
-  border-color: #ffffff;
+  border-color: #000000;
 }
 .title-post {
   display: flex;
@@ -39,7 +39,10 @@
 .img-profil {
   border-radius: 50%;
   width: 40px;
+  height: 40px;
 }
+
+
 .img {
   width: 50px;
   height:70px ;
@@ -53,7 +56,7 @@
   display: flex;
   border-radius: 15px;
   flex-direction: row;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0,0.8);
   padding: 5px;
 }
 .card {
@@ -67,5 +70,5 @@
 }
 .post{
   border-radius: 15px;
-  
+
 }
