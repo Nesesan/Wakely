@@ -1,14 +1,14 @@
 <div class="container">
-  <%= link_to root_path, class: "return-arrow " do %>
-  <%= image_tag("logo-retour.png", size: "20x20", class: "responsive-image mt-2 png") %>
-  <% end %>
+    <%= link_to root_path, class: "return-arrow " do %>
+    <i class="fa-solid fa-chevron-left"></i>
+    <% end %>
   <div class="post mt-4">
     <div class="title-post">
       <div class="profil-img-username d-flex flex-row align-items-end">
         <img src=<%=@post.user.picture%> class="img-profil" alt="sad">
       </div>
       <div class="profil-info">
-        <div class="user text-start">
+        <div class="user-comment text-start">
           <%= link_to @post.user.username, user_path(@post.user), class:"text-decoration-none text-dark"%>
         </div>
         <div class="mood">
