@@ -1,6 +1,6 @@
 class Post < ApplicationRecord
   attr_reader :search_music
-
+  scope :followed, -> { where(followed: true) }
   belongs_to :user
   has_many :comments, dependent: :destroy
   has_many :reactions, dependent: :destroy

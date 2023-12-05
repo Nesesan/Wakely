@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :comments
   has_many :reactions
   validates :username, uniqueness: true
+  has_many :friendships_as_asker, class_name: "Friendship", foreign_key: :asker_id
+  has_many :friendships_as_receiver, class_name: "Friendship", foreign_key: :receiver_id
 
   def last_posts
     self.posts[0..-2]
