@@ -7,16 +7,19 @@
       <div class="profil-img-username d-flex flex-row align-items-end">
         <img src=<%=@post.user.picture%> class="img-profil" alt="sad">
       </div>
-      <div class="profil-info">
+      <div class="profil-info title-post">
         <div class="user text-start">
-          <%= link_to @post.user.username, user_path(@post.user), class:"text-decoration-none text-dark"%>
+          <%= link_to @post.user.username, user_path(@post.user), class:"text-decoration-none wakely-font"%>
         </div>
         <div class="mood">
-          <%= link_to @post.mood, post_path(@post), class:"text-decoration-none text-dark"%>
+          <%= link_to @post.mood, post_path(@post), class:"text-decoration-none wakely-font"%>
         </div>
       </div>
     </div>
     <div class="main-post border border-dark">
+    <div class="content mx-3">
+        <p class="wakely-font"><%= @post.content %></p>
+      </div>
       <div class="track">
         <iframe style="border-radius:12px"
           src=<%="https://open.spotify.com/embed/track/#{@post.track_id}?utm_source=generator"%> width="100%"
@@ -24,16 +27,16 @@
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
 
-      <div class="content mx-3">
-        <p class="wakely-font"><%= @post.content %></p>
-      </div>
+
     </div>
   </div>
   <div class="post-footer d-flex justify-content-between mx-1">
     <div class="date-time mx-1 ">
       <small><%=@post.created_at%></small>
     </div>
+    <% if @post.user== current_user %>
       <%= link_to "supprimer le post", post_path(@post) ,class:"sup-btn" , data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+    <%end%>
     </div>
 
 
@@ -65,12 +68,14 @@
           src="https://media.licdn.com/dms/image/D4D03AQEh19LSGxIO5w/profile-displayphoto-shrink_200_200/0/1681401337972?e=2147483647&v=beta&t=l8me4E87y2ZEbBu0hoqeTT3hs1PcPSaWEcBR4TXYu2Y"
           alt="Card image cap" class="img-comment">
         <div class="card-block">
-          <h5 class="card-title comment-user"><%= comment.user.username %></h5>
+          <%= link_to comment.user.username, user_path(comment.user), class:"text-decoration-none wakely-font"%>
           <h4 class="comment-text card-text"> <%= comment.content %></h4>
           <h6 class="date-time"><%= comment.created_at.strftime('%d.%m.%Y - %H:%M:%S') %></h6>
         </div>
       </div>
-      <%= link_to "Supprimer le commentaire", comment_path(comment), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"link-supp" %>
+      <%if comment.user==current_user%>
+        <%= link_to "Supprimer le commentaire", comment_path(comment), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"link-supp" %>
+      <%end%>
     </div>
     <% end %>
   </div>

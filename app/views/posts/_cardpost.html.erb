@@ -14,7 +14,7 @@
         <%= link_to post.user.username, user_path(post.user), class:"text-decoration-none wakely-font"%>
         </div>
         <div class="mood">
-        <%= link_to post.mood, post_path(post), class:"text-decoration-none text-white"%>
+        <h6 class="wakely-font"><%=post.mood%></h6>
         </div>
         </div>
     </div>
@@ -27,7 +27,7 @@
           </div>
         </div>
         </div>
-        <div class="date-time mx-1 wakely-font ">
+        <div class="date-time mx-1 wakely-font justify-content-start">
           <h6> <small><%=post.created_at.strftime('%d/%m/%Y - %H:%M:%S')%></small></h6>
         </div>
         <div>
