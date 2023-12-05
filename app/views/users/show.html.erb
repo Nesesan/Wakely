@@ -65,7 +65,7 @@
         </div>
         </div>
         <div class="date-time mx-1 wakely-font d-flex justify-content-start">
-          <h6 class="mx-1"> <small><%=@user.last_post_day.created_at.strftime('%d/%m/%Y - %H:%M:%S')%></small></h6>
+          <h6 class="mx-1"> <small><%=@user.last_post_day.created_at.strftime('%d.%m.%Y - %H:%M:%S')%></small></h6>
         </div>
         <div>
         <h6 class= "d-flex justify-content-start" ><small><%= link_to "Ajouter un commentaire", post_path(@user.last_post_day), class:"add_comment"%></small></h6>
