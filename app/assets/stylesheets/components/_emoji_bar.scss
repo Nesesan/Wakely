@@ -1,0 +1,57 @@
+
+
+ul{
+  list-style-type: none;
+}
+
+.emojis {
+	display: flex;
+	flex-direction: row;
+	background-color: #ffffff;
+	border-radius: 4rem;
+  justify-content: space-around;
+
+
+
+	.emoji {
+		cursor: pointer;
+		user-select: none;
+		font-size: 15px;
+		margin: 0 0.5rem;
+		transition: all 0.3s;
+
+
+
+		// &.active {
+		// 	animation-name: emoji;
+		// 	animation-duration: 0.6s;
+		// 	animation-direction: forwards;
+		// 	animation-timing-function: ease-out;
+		// 	animation-iteration-count: 1;
+		// }
+
+		&:hover {
+			transform: scale(1.5);
+		}
+	}
+}
+
+// @keyframes emoji {
+// 	5% {
+// 		transform: translateY(1rem);
+// 	}
+// 	10% {
+// 		transform: translateY(0) scale(1);
+// 		opacity: 1;
+// 	}
+// 	50% {
+// 		transform: translateY(-4rem) scale(1.5) rotateY(90deg);
+// 	}
+// 	80% {
+// 		opacity: 0;
+// 	}
+// 	100% {
+// 		transform: translateY(-8rem) scale(2) rotateY(180deg);
+// 		opacity: 0;
+// 	}
+// }
