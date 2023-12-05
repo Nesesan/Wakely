@@ -37,23 +37,54 @@
       <h6 class="wakely-font justify-content-center d-flex"><strong>Dernier post</strong></h6>
       <div class="card ">
         <div class="card-body text-center">
+          <div class="post">
+            <div class="title-post">
+              <div class="profil-img-username d-flex flex-row align-items-end">
+                <% if @user.picture? %>
+                <img src=<%=@user.picture%> class="img-profil" alt="sad">
+                <% else %>
+                <img
+                  src="data:image/png;base64,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"
+                  class="img-profil" alt="sad">
+                <% end %>
+              </div>
+              <div class="profil-info">
+                <div class="user text-start">
+                  <p class="text-decoration-none wakely-font"><%= @user.username%></p>
+                </div>
+                <div class="mood">
+                  <h6 class="wakely-font"><%=@user.last_post_day.mood%></h6>
+                </div>
+              </div>
+            </div>
+            <div class="main-post border border-dark">
+              <div class="content mx-3">
+                <p class="wakely-font content-post"><%= @user.last_post_day.content %></p>
+              </div>
+              <div class="track">
+                <iframe style="border-radius:12px"
+                  src=<%="https://open.spotify.com/embed/track/#{@user.last_post_day.track_id}?utm_source=generator"%>
+                  width="100%" height="152" frameBorder="0" allowfullscreen=""
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"></iframe>
+              </div>
+            </div>
     <div class="post">
         <div class="main-post border border-dark">
         <div class="content mx-3 d-flex justify-content-start">
             <p class= "wakely-font content-post"><%= @user.last_post_day.content %></p>
+
           </div>
-          <div class="track">
-          <iframe style="border-radius:12px" src=<%="https://open.spotify.com/embed/track/#{@user.last_post_day.track_id}?utm_source=generator"%> width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <div class="date-time mx-1 wakely-font d-flex justify-content-start">
+            <h6 class="mx-1"> <small><%=@user.last_post_day.created_at.strftime('%d/%m/%Y - %H:%M:%S')%></small></h6>
           </div>
-        </div>
-        </div>
-        <div class="date-time mx-1 wakely-font d-flex justify-content-start">
-          <h6 class="mx-1"> <small><%=@user.last_post_day.created_at.strftime('%d/%m/%Y - %H:%M:%S')%></small></h6>
-        </div>
-        <div>
-        <h6 class= "d-flex justify-content-start" ><small><%= link_to "Ajouter un commentaire", post_path(@user.last_post_day), class:"add_comment"%></small></h6>
-        </div>
-    <br>
+          <div>
+            <h6 class="d-flex justify-content-start">
+              <small><%= link_to "Ajouter un commentaire", post_path(@user.last_post_day), class:"add_comment"%></small>
+            </h6>
+            <%= link_to "supprimer le post", post_path(@user.last_post_day) ,class:"sup-btn text-light" , data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+          </div>
+          <br>
 
 
 
@@ -84,7 +115,11 @@
             <div class="date-time mx-1 wakely-font d-flex justify-content-start">
               <small class="mx-1"><%=post.created_at%></small>
             </div>
-            <h6 class= "d-flex justify-content-start" ><small><%= link_to "Ajouter un commentaire", post_path(post), class:"add_comment"%></small></h6>
+            <h6 class="d-flex justify-content-start">
+              <small><%= link_to "Ajouter un commentaire", post_path(post), class:"add_comment"%></small></h6>
+
+            <%= link_to "supprimer le post", post_path(post.user) ,class:"sup-btn text-light" , data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+
 
             <% end %>
           </div>
