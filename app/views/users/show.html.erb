@@ -34,8 +34,8 @@
   </div>
   <div class="row d-flex justify-content-center align-items-center h-100 mt-3">
     <div class="col-md-12 col-xl-4">
-      <h6 class="wakely-font justify-content-center d-flex"><strong>Dernier post</strong></h6>
-      <div class="card ">
+      <h6 class="wakely-font justify-content-center d-flex mt-2"><strong>Dernier post</strong></h6>
+      <div class="card mt-3">
         <div class="card-body text-center">
           <div class="post">
             <div class="title-post">
@@ -69,39 +69,28 @@
                   loading="lazy"></iframe>
               </div>
             </div>
-    <div class="post">
-        <div class="main-post border border-dark">
-        <div class="content mx-3 d-flex justify-content-start">
-            <p class= "wakely-font content-post"><%= @user.last_post_day.content %></p>
+            <div class="date-time mx-1 wakely-font d-flex justify-content-start">
+              <h6 class="mx-1"> <small><%=@user.last_post_day.created_at.strftime('%d.%m.%Y - %H:%M:%S')%></small></h6>
+            </div>
+            <div>
+         
+                <small><%= link_to "Ajouter un commentaire", post_path(@user.last_post_day), class:"add_comment"%></small>
+              </h6>
+              <%= link_to "supprimer le post", post_path(@user.last_post_day) ,class:"sup-btn text-light" , data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+            </div>
+            <br>
+
+
 
           </div>
-          <div class="date-time mx-1 wakely-font d-flex justify-content-start">
-            <h6 class="mx-1"> <small><%=@user.last_post_day.created_at.strftime('%d/%m/%Y - %H:%M:%S')%></small></h6>
-          </div>
-          <div>
-            <h6 class="d-flex justify-content-start">
-              <small><%= link_to "Ajouter un commentaire", post_path(@user.last_post_day), class:"add_comment"%></small>
-            </h6>
-            <%= link_to "supprimer le post", post_path(@user.last_post_day) ,class:"sup-btn text-light" , data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-          </div>
-          <br>
-
-
-
         </div>
       </div>
-    </div>
-    <div class="row d-flex justify-content-center h-100 mt-3">
-      <div class="col-md-12 col-xl-4">
-        <h6 class=" wakely-font d-flex"><strong>Memories</strong></h6>
-        <div class="card">
-          <div class="card-body">
-            <% @last_posts.each do |post| %>
-        <div class="main-post border border-dark">
-        <div class="content mx-3 d-flex justify-content-start">
-            <p class= "wakely-font content-post"><%= post.content %></p>
-          </div>
-              </div>
+      <div class="row d-flex justify-content-center h-100 mt-3">
+        <div class="col-md-12">
+          <h6 class=" wakely-font d-flex justify-content-center"><strong>Memories</strong></h6>
+          <div class="card">
+            <div class="card-body">
+              <% @last_posts.each do |post| %>
               <div class="main-post">
                 <div class="track">
                   <iframe style="border-radius:12px"
@@ -111,20 +100,15 @@
                     loading="lazy"></iframe>
                 </div>
               </div>
-            </div>
-            <div class="date-time mx-1 wakely-font ">
-              <h6> <small><%=post.created_at.strftime('%d/%m/%Y - %H:%M:%S')%></small></h6>
-            </div>
-            <h6 class="d-flex justify-content-start">
+              <div class="date-time mx-1 wakely-font d-flex justify-content-start">
+                <small><%=post.created_at.strftime('%d.%m.%Y - %H:%M:%S')%></small>
+              </div>
               <small><%= link_to "Ajouter un commentaire", post_path(post), class:"add_comment"%></small></h6>
-
-            <%= link_to "supprimer le post", post_path(post.user) ,class:"sup-btn text-light" , data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-
-
-            <% end %>
+              <%= link_to "supprimer le post", post_path(post.user) ,class:"sup-btn" , data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <br>
-    <br>
+      <br>
+      <br>
