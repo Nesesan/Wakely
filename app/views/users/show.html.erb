@@ -91,11 +91,11 @@
         </div>
       </div>
     </div>
-    <div class="row d-flex justify-content-center align-items-center h-100 mt-3">
+    <div class="row d-flex justify-content-center h-100 mt-3">
       <div class="col-md-12 col-xl-4">
-        <h6 class=" wakely-font justify-content-center d-flex"><strong>Memories</strong></h6>
+        <h6 class=" wakely-font d-flex"><strong>Memories</strong></h6>
         <div class="card">
-          <div class="card-body text-center">
+          <div class="card-body">
             <% @last_posts.each do |post| %>
         <div class="main-post border border-dark">
         <div class="content mx-3 d-flex justify-content-start">
@@ -112,8 +112,8 @@
                 </div>
               </div>
             </div>
-            <div class="date-time mx-1 wakely-font d-flex justify-content-start">
-              <small class="mx-1"><%=post.created_at%></small>
+            <div class="date-time mx-1 wakely-font ">
+              <h6> <small><%=post.created_at.strftime('%d/%m/%Y - %H:%M:%S')%></small></h6>
             </div>
             <h6 class="d-flex justify-content-start">
               <small><%= link_to "Ajouter un commentaire", post_path(post), class:"add_comment"%></small></h6>
@@ -126,7 +126,5 @@
         </div>
       </div>
     </div>
-  </div>
-</div>
-<br>
-<br>
+    <br>
+    <br>
