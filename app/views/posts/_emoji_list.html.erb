@@ -1,0 +1,5 @@
+<% post.reactions.each do |reaction| %>
+  <ul data-emoji-picker-target="ul">
+      <li><%= reaction.emoji %><span><%= reaction.count %></span></li>
+  </ul>
+<% end %>

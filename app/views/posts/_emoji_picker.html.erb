@@ -1,0 +1,6 @@
+<i class="fa-solid fa-face-smile" data-action="click->emoji-picker#toggle"></i>
+<div class="emojis" data-emoji-picker-target="emojiPicker">
+  <% %w(👍 ❤️ 😲 😡 😢).each do |emoji| %>
+    <div class="emoji" data-action="click->emoji-picker#createReaction"><%= emoji %></div>
+  <% end %>
+</div>
