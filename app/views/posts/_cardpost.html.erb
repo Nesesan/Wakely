@@ -41,12 +41,12 @@
   <ul class="fixed-emoji-bar" data-emoji-picker-target="ul">
     <%= render "emoji_list", post: post %>
   </ul>
-  <div class="date-emoji mt-2">
+  <div class="date-emoji">
     <div class="d-flex">
       <%= render "emoji_picker" %>
       <%= link_to post_path(post), class:"add_comment" do %>
     </div>
-        <i class="fa-solid fa-comment"></i>
+        <i class="fa-solid fa-message"></i>
       <% end %>
   </div>
   <br>
