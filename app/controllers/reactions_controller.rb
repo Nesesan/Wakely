@@ -1,15 +1,13 @@
 class ReactionsController < ApplicationController
   def create
     @post = Post.find(params[:post_id])
-    @reaction = Reaction.new(reaction_params)
-    @reaction.post = @post
+    @reaction = Reaction.find_or_initialize_by(emoji: reaction_params[:emoji], post: @post)
     @reaction.user = current_user
     if @reaction.save
-      @post.increment_reaction_count(@reaction)
+      @reaction.increment_count
       respond_to do |format|
-        format.html { render_to_string(partial: "posts/emoji_list", locals: { post: @post }, formats: [:html]) }
+        format.text { render partial: "posts/emoji_list", locals: { post: @post }, formats: [:html] }
       end
-      head :ok
     end
   end
 

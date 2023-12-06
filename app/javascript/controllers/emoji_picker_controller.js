@@ -11,12 +11,8 @@ export default class extends Controller {
     postId: Number
   }
 
-  connect() {
-  }
-
   toggle(event) {
-    event.currentTarget.classList.add("d-none")
-    this.emojiPickerTarget.classList.remove("d-none")
+    this.emojiPickerTarget.classList.toggle("d-none")
   }
 
   createReaction(event) {
@@ -36,9 +32,9 @@ export default class extends Controller {
         },
         body: JSON.stringify(data)
       })
-    .then(response => response.json())
+    .then(response => response.text())
     .then((data) => {
-      console.log(data)
+      this.ulTarget.innerHTML = data
     })
   }
 }
