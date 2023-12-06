@@ -1,14 +1,16 @@
 <div data-controller="search-music" data-search-music-value=<%= search_music_path %>>
   <%= simple_form_for @post do |f| %>
-    <%= f.input :mood, collection: Post::MOODS %>
-    <%= f.input :search_music, input_html: { data: {
+  <%= f.input :mood, label: "Comment te sens-tu ?", collection: Post::MOODS %>
+  <%= f.input :search_music, label:'Choisis ta musique', input_html: { data: {
                                               search_music_target: "input",
                                               action: 'keyup->search-music#getTracks'
                                             }
                                           } %>
-    <%= f.input :track_id, as: :hidden, input_html: { data: { search_music_target:"hiddenInput" }} %>
-    <ul data-search-music-target="ul"></ul>
-    <%= f.input :content %>
-    <%= f.submit class:" btn btn-outline-light" %>
-  <% end %>
+  <%= f.input :track_id, as: :hidden, input_html: { data: { search_music_target:"hiddenInput" }} %>
+  <ul data-search-music-target="ul"></ul>
+  <%= f.input :content, label: 'Commentaire...' %>
+  <div class= "d-flex justify-content-end">
+    <%= f.submit "Envoyer", class:" btn btn-outline-light rounded-pill" %>
+    <% end %>
+  </div>
 </div>
