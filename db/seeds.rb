@@ -20,7 +20,6 @@ jade = User.create!(email: "jade@gmail.com", password: "azerty", username: "Jade
 roberto = User.create!(email: "roberto@gmail.com", password: "azerty", username: "Robert", picture: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
 marc = User.create!(email: "marc@gmail.com", password: "azerty", username: "Marc", picture: "https://images.pexels.com/photos/1462980/pexels-photo-1462980.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
 esmeralda = User.create!(email: "esmeralda@gmail.com", password: "azerty", username: "Esmeralda", picture: "https://images.pexels.com/photos/2460227/pexels-photo-2460227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
-john = User.create!(email: "john@gmail.com", password: "azerty", username: "John", picture: "https://images.pexels.com/photos/2460227/pexels-photo-2460227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
 
 print "création des posts"
 
