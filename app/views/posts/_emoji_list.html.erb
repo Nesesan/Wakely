@@ -1,5 +1,5 @@
-<% post.reactions.each do |reaction| %>
-  <ul data-emoji-picker-target="ul">
-      <li><%= reaction.emoji %><span><%= reaction.count %></span></li>
-  </ul>
+<% post.best_reactions.each do |reaction| %>
+  <li class="emoji-reaction <%= "selected" if reaction.current_user?(current_user) %>">
+    <%= reaction.emoji %> <span><%= reaction.count %></span>
+  </li>
 <% end %>
