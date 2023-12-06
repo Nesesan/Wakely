@@ -1,9 +1,10 @@
 .comment {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   justify-content: space-between;
   align-items: start;
   display: flex;
   padding-top: 20px;
+
 }
 
 .comment-text {
@@ -32,11 +33,6 @@
   text-align: right;
 }
 
-.link-supp {
-  color: white;
-  text-align: end;
-}
-
 .comment-user {
   color: white;
   font-size: smaller;
@@ -54,4 +50,11 @@
 .ushow {
   font-size: smaller;
   text-decoration: none;
+}
+
+.date-time-comment {
+  color: #808080;
+  font-size: xx-small;
+  font-size: xx-small;
+  margin-left: 70px;
 }
