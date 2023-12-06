@@ -74,7 +74,7 @@
         <div class="btn-supp">
           <%if comment.user==current_user%>
           <%= link_to comment_path(comment), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"link-supp" do %>
-          <i class="fa-solid fa-delete-left" style="color: #ffffff;"></i>
+          <i class="fa-solid fa-delete-left"></i>
           <% end %>
           <% end %>
         </div>

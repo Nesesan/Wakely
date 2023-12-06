@@ -15,7 +15,7 @@
     <%end%>
   </div>
 
-  
+
   <div class="row d-flex justify-content-center align-items-center h-100">
     <div class="col-md-12 col-xl-4">
       <div class="card">
@@ -82,11 +82,13 @@
             <div class="date-time mx-1 wakely-font d-flex justify-content-start">
               <h6 class="mx-1"> <small><%=@user.last_post_day.created_at.strftime('%d.%m.%Y - %H:%M:%S')%></small></h6>
             </div>
-            <div>
-
-              <small><%= link_to "Ajouter un commentaire", post_path(@user.last_post_day), class:"add_comment"%></small>
-              </h6>
-              <%= link_to "supprimer le post", post_path(@user.last_post_day) ,class:"sup-btn text-light" , data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+            <div class="d-flex justify-content-between">
+             <%= link_to post_path(@user.last_post_day) do%>
+             <i class="fa-solid fa-message"></i>
+             <% end %>
+              <%= link_to post_path(@user.last_post_day), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+              <i class="fa-solid fa-delete-left"></i>
+              <% end %>
             </div>
             <br>
 
@@ -110,25 +112,21 @@
                     loading="lazy"></iframe>
                 </div>
                 <div class="date-time mx-1 wakely-font d-flex justify-content-start">
-                  <h6 class="mx-1"> <small><%=@user.last_post_day.created_at.strftime('%d/%m/%Y - %H:%M:%S')%></small>
+                  <h6 class="mx-1"> <small><%=@user.last_post_day.created_at.strftime('%d.%m.%Y - %H:%M:%S')%></small>
                   </h6>
                 </div>
                 <div>
-                  <h6 class="d-flex justify-content-start">
-                    <small><%= link_to "Ajouter un commentaire", post_path(@user.last_post_day), class:"add_comment"%></small>
-                  </h6>
-                  <%= link_to "supprimer le post", post_path(@user.last_post_day) ,class:"sup-btn text-light" , data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+             <div class="d-flex justify-content-between">
+                    <%= link_to post_path(@user.last_post_day) do%>
+             <i class="fa-solid fa-message"></i>
+                   <% end %>
+                  <%= link_to post_path(@user.last_post_day), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+                  <i class="fa-solid fa-delete-left"></i>
+                  <% end %>
+                  </div>
                 </div>
                 <br>
-
-
-
               </div>
-              <div class="date-time mx-1 wakely-font d-flex justify-content-start">
-                <small><%=post.created_at.strftime('%d.%m.%Y - %H:%M:%S')%></small>
-              </div>
-              <small><%= link_to "Ajouter un commentaire", post_path(post), class:"add_comment"%></small></h6>
-              <%= link_to "supprimer le post", post_path(post.user) ,class:"sup-btn" , data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
               <% end %>
             </div>
           </div>
@@ -136,3 +134,6 @@
       </div>
       <br>
       <br>
+    </div>
+  </div>
+</div>
