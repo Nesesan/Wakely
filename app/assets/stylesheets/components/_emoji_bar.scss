@@ -1,7 +1,22 @@
-
-
-ul{
+.fixed-emoji-bar {
   list-style-type: none;
+  display: flex;
+  gap: 5px;
+  position: relative;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10
+}
+
+.emoji-reaction {
+  width: 15%;
+  border-radius: 5px;
+  background-color: white;
+  text-align: center;
+}
+
+.selected {
+  background-color: #E3E9C2;
 }
 
 .emojis {
