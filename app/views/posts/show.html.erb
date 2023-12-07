@@ -3,10 +3,10 @@
   <i class="fa-solid fa-chevron-left"></i>
   <% end %>
   <div class="post">
-    <div class="title-post">
+    <div class="title-post mx-2">
       <div class="profil-img-username d-flex flex-row align-items-end">
         <% if @post.user.picture? %>
-        <img src=<%=@post.user.picture%> class="img-profil" alt="sad">
+        <img src=<%=@post.user.picture%> class="img-profil ml-2" alt="sad">
         <% else %>
         <img
           src="data:image/png;base64,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"
@@ -61,27 +61,34 @@
     </div>
   </div>
 
-
-  <div class="container mb-5">
-    <div class="row d-flex justify-content-center align-items-center p-3">
-      <% @post.comments.each do |comment| %>
-     <div>
-      <div class="d-flex">
+<div class="container mb-5">
+<% @post.comments.each do |comment| %>
+  <div class="container-comment">
+    <div class="comment-title d-flex justify-content-between">
+      <div class="comment-user-profil d-flex">
+        <div class="comment-user-picture">
         <img src=<%=comment.user.picture%> class="card-img-top img-circle rounded-circle" />
-        <div class="card-block">
-          <%= link_to comment.user.username, user_path(comment.user), class:"text-decoration-none wakely-font"%>
-          <h4 class="comment-text card-text"> <%= comment.content %></h4>
         </div>
-        <div class="btn-supp">
-          <%if comment.user==current_user%>
-          <%= link_to comment_path(comment), data: {turbo_method: :delete, turbo_confirm: "Etes-vous sûr?"}, class:"link-supp" do %>
-          <i class="fa-solid fa-delete-left"></i>
-          <% end %>
-          <% end %>
+        <div class="comment-user-name">
+        <%= link_to comment.user.username, user_path(comment.user), class:"text-decoration-none wakely-font"%>
         </div>
       </div>
-      <h6 class="date-time-comment mt-3"><%= comment.created_at.strftime('%d.%m.%Y - %H:%M:%S') %></h6>
-    </div>
-    <%end%>
+      <div class="comment-button-sup">
+        <%if comment.user==current_user%>
+            <%= link_to comment_path(comment), data: {turbo_method: :delete, turbo_confirm: "Etes-vous sûr?"}, class:"link-supp" do %>
+            <i class="fa-solid fa-delete-left"></i>
+          <% end %>
+        <% end %>
      </div>
+    </div>
+    <div class="comment-footer d-flex justify-content-start mx-4 m">
+      <div class="comment-user my-2">
+        <h4 class="comment-text card-text ml-4"> <%= comment.content %></h4>
+      </div>
+    </div>
+  </div>
+  <br>
+  <%end%>
 </div>
+<br>
+<br>
