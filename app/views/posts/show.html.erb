@@ -38,7 +38,7 @@
     <div class="date-time">
       <small><%=@post.created_at.strftime('%d.%m.%Y - %H:%M:%S')%></small>
     </div>
-    <% if @post.user== current_user %>
+    <% if @post.user== current_user  %>
     <%= link_to "supprimer le post", post_path(@post) ,class:"sup-btn" , data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
     <%end%>
   </div>
@@ -74,7 +74,7 @@
         </div>
       </div>
       <div class="comment-button-sup">
-        <%if comment.user==current_user%>
+        <%if comment.user==current_user || @post.user == current_user%>
             <%= link_to comment_path(comment), data: {turbo_method: :delete, turbo_confirm: "Etes-vous sûr?"}, class:"link-supp" do %>
             <i class="fa-solid fa-delete-left"></i>
           <% end %>
