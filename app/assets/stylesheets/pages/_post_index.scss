@@ -46,7 +46,6 @@
 .mood {
   justify-content: end;
   align-items: end;
-  margin-bottom: 5px;
 }
 .track {
   display: flex;
@@ -54,11 +53,10 @@
   flex-direction: row;
   padding: 5px;
 }
-.card {
+.card-index {
   border-radius: 10px;
   backdrop-filter: blur(10px);
   background-color: #202020;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 .title-post{
   border-radius: 10px;

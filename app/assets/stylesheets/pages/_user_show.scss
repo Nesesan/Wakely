@@ -1,15 +1,28 @@
 .card-body {
+  border: none;
+  border-top: 2px solid #202020;
+  background-color: #353535;
+
+}
+
+
+.card-user {
   border-radius: 15px;
   background-color: #202020;
 }
+
 .main-post, .title-post, .track {
   border-radius: 15px;
 }
 
+img {
+  background-size: cover;
+}
 .img-profil-bigger {
   border-radius: 50%;
   width: 150px;
   height: 150px;
+  background-size: cover;
 }
 
 .Btn {
