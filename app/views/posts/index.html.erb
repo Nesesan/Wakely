@@ -1,6 +1,6 @@
 <div class="banner ">
 
-<!-- Modal -->
+  <!-- Modal -->
   <div class="modal custom fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -11,19 +11,19 @@
         <div class="modal-body">
           <%= render "post_form" %>
         </div>
-        
+
       </div>
     </div>
   </div>
-<h1 class= "wakely-font my-2">Wakely</h1>
-</div>
-<div class="scrollmenu mx-3 wakely-font">
-  <% Post::MOODS.each do |mood|  %>
+  <img class="logo-wak mb-2 mt-1" src="https://res.cloudinary.com/dsbtmmjt2/image/upload/v1701966700/akely_oyctua.png"
+    alt="logo wakely">
+  <div class="scrollmenu mx-3 wakely-font">
+    <% Post::MOODS.each do |mood|  %>
     <%=link_to mood, posts_path(mood: mood), class:"a-link" %>
-  <% end %>
-</div>
-<div class="container-md">
-  <%= render "cardpost"%>
-  <br>
-  <br>
-</div>
+    <% end %>
+  </div>
+  <div class="container-md">
+    <%= render "cardpost"%>
+    <br>
+    <br>
+  </div>
