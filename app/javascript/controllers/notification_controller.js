@@ -1,11 +1,22 @@
-import { Controller } from "@hotwired/stimulus"
-import { TimepickerUI } from "timepicker-ui";
+import {
+  Controller
+} from "@hotwired/stimulus"
+import {
+  TimepickerUI
+} from "timepicker-ui";
 
 // Connects to data-controller="notification"
 export default class extends Controller {
   static targets = ["timePicker", "input"]
+
+    toggle(event) {
+    this.timePickerTarget.classList.toggle("d-none")
+    }
+
   connect() {
-    const options = { mobile: true }
+    const options = {
+      mobile: true
+    }
     const timePicker = new TimepickerUI(this.timePickerTarget, options)
     timePicker.create()
   }
@@ -52,9 +63,9 @@ export default class extends Controller {
       icon: "https://res.cloudinary.com/dsbtmmjt2/image/upload/v1701948655/logo-wakely_uf0avr.png",
       badge: "https://res.cloudinary.com/dsbtmmjt2/image/upload/v1701948655/logo-wakely_uf0avr.png"
     });
-      notification.onclick = () => {
-        window.open("https://www.wakely.me", "_blank")
-        notification.close()
-      }
+    notification.onclick = () => {
+      window.open("https://www.wakely.me", "_blank")
+      notification.close()
     }
+  }
 }

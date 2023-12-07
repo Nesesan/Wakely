@@ -2,6 +2,8 @@
   border: none;
   border-top: 2px solid #202020;
   background-color: #353535;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .card-user {
@@ -90,5 +92,11 @@ img {
 }
 .fa-chevron-left{
   margin-top: 12px;
+  margin-left: 8px;
+}
+.notif-icon{
+  display: flex;
+  justify-content: start;
+  margin-top: 5px;
   margin-left: 8px;
 }
