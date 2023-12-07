@@ -1,15 +1,12 @@
 <% @posts.reverse.each do |post| %>
-<div data-controller="emoji-picker"
-     data-emoji-picker-url-value=<%= post_reactions_path(post) %>
-     data-emoji-picker-user-id-value=<%= current_user.id %>
-     data-emoji-picker-post-id-value=<%= post.id %>
->
+<div data-controller="emoji-picker" data-emoji-picker-url-value=<%= post_reactions_path(post) %>
+  data-emoji-picker-user-id-value=<%= current_user.id %> data-emoji-picker-post-id-value=<%= post.id %>>
   <div class="post">
     <div class="title-post">
       <div class="profil-img-username d-flex flex-row align-items-end">
         <% if post.user.picture? %>
         <%= link_to user_path(post.user) do %>
-          <img src=<%=post.user.picture%> class="img-profil" alt="sad">
+        <img src=<%=post.user.picture%> class="img-profil" alt="sad">
         <% end %>
         <% else %>
         <img
@@ -20,7 +17,7 @@
       <div class="profil-info mt-3">
         <div class="mood">
           <h6 class="wakely-font"><%= post.user.username%> est dans un mood <%=post.mood%></h6>
-           <div class="date-time mx-1 wakely-font justify-content-start">
+          <div class="date-time mx-1 wakely-font justify-content-start">
             <h6> <small><%=post.created_at.strftime('%d/%m/%Y - %H:%M:%S')%></small></h6>
           </div>
         </div>
@@ -32,8 +29,8 @@
       </div>
       <div class="track">
         <iframe style="border-radius:12px"
-          src=<%="https://open.spotify.com/embed/track/#{post.track_id}?utm_source=generator"%> width="100%" height="152"
-          frameBorder="0" allowfullscreen=""
+          src=<%="https://open.spotify.com/embed/track/#{post.track_id}?utm_source=generator"%> width="100%"
+          height="152" frameBorder="0" allowfullscreen=""
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
     </div>
@@ -44,11 +41,10 @@
   <div class="date-emoji">
     <div class="d-flex">
       <%= render "emoji_picker" %>
-      <%= link_to post_path(post), class:"add_comment" do %>
-    </div>
-        <i class="fa-solid fa-message"></i>
+      <%= link_to post_path(post) , class:"add_comment" do %>
+      <i class="fa-solid fa-message"></i>
       <% end %>
+    </div>
   </div>
   <br>
-</div>
-<% end %>
+  <% end %>

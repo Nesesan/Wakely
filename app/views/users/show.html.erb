@@ -3,7 +3,7 @@
     <%= link_to root_path, class: "return-arrow " do %>
     <i class="fa-solid fa-chevron-left"></i>
     <% end %>
-    <h2 class= "wakely-font my-2 text-center">Profil</h2>
+    <h2 class= "wakely-font my-2 text-center ">Profil</h2>
     <%= link_to destroy_user_session_path, data: {turbo_method: :delete} do %>
     <button class="Btn">
       <div class="sign"><svg viewBox="0 0 512 512">
@@ -17,13 +17,15 @@
     <%end%>
   </div>
 
-  <%= render "notification" %>
 
 
   <div class="row d-flex justify-content-center align-items-center h-100">
     <div class="col-md-12 col-xl-4">
         <div class=" card card-user text-center">
-          <div class="mt-2 mb-4">
+  <div class= "notif-icon">
+  <%= render "notification" %>
+  </div>
+          <div class="mb-4">
             <% if @user.picture? %>
             <img src=<%=@user.picture%> class="img-profil-bigger" />
             <%else%>
@@ -69,7 +71,6 @@
                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                   loading="lazy"></iframe>
               </div>
-            </div>
             <div class="date-time mx-1 wakely-font d-flex justify-content-start">
               <h6 class="mx-1"> <small><%=@user.last_post_day.created_at.strftime('%d.%m.%Y - %H:%M:%S')%></small></h6>
             </div>
@@ -81,10 +82,8 @@
               <i class="fa-solid fa-delete-left"></i>
               <% end %>
             </div>
+            </div>
             <br>
-
-
-
           </div>
         </div>
 
@@ -116,15 +115,14 @@
                   <% end %>
                   </div>
                 </div>
-                <br>
+
               </div>
               <% end %>
-            </div>
 
+            </div>
+<br>
         </div>
       </div>
-      <br>
-      <br>
     </div>
   </div>
 </div>

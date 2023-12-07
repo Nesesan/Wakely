@@ -1,7 +1,9 @@
-<div data-controller="notification">
-  <i class="fa-solid fa-clock"></i>
-  <div class="timepicker-ui" data-notification-target="timePicker">
-    <input data-notification-target="input" type="text" class="timepicker-ui-input" value="12:00 AM" />
-    <button data-action="click->notification#setNotification">Valider la notification</button>
+
+  <div data-controller="notification">
+    <i class="fa-solid fa-clock" data-action="click->notification#toggle"></i>
+    <div class="timepicker-ui d-none" data-notification-target="timePicker">
+      <input data-notification-target="input" type="text" class="timepicker-ui-input" value="12:00 AM" />
+      <button data-action="click->notification#setNotification">Valider la notification</button>
+    </div>
   </div>
-</div>
+

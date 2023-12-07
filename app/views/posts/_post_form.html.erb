@@ -8,7 +8,7 @@
                                           } %>
   <%= f.input :track_id, as: :hidden, input_html: { data: { search_music_target:"hiddenInput" }} %>
   <ul data-search-music-target="ul"></ul>
-  <%= f.input :content, label: 'Commentaire...' %>
+  <%= f.input :content,  label: false, placeholder: 'Commentaire...' %>
   <div class= "d-flex justify-content-end">
     <%= f.submit "Envoyer", class:" btn btn-outline-light rounded-pill" %>
     <% end %>
