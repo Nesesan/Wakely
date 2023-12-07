@@ -34,53 +34,52 @@
       </div>
     </div>
   </div>
-<div class="post-footer d-flex justify-content-between mx-2">
-  <div class="date-time">
-    <small><%=@post.created_at.strftime('%d.%m.%Y - %H:%M:%S')%></small>
+  <div class="post-footer d-flex justify-content-between mx-2">
+    <div class="date-time">
+      <small><%=@post.created_at.strftime('%d.%m.%Y - %H:%M:%S')%></small>
+    </div>
+    <% if @post.user== current_user %>
+    <%= link_to "supprimer le post", post_path(@post) ,class:"sup-btn" , data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+    <%end%>
   </div>
-  <% if @post.user== current_user %>
-  <%= link_to "supprimer le post", post_path(@post) ,class:"sup-btn" , data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-  <%end%>
-</div>
 </div>
 </div>
 <br>
 
-<div class="row d-flex justify-content-center align-items-center h-100 p-3">
-  <div class="form-inputs">
-    <%= simple_form_for [@post, @comment],
+  <div class="row d-flex justify-content-center align-items-center h-100 p-3">
+    <div class="form-inputs">
+      <%= simple_form_for [@post, @comment],
           html: {class: "d-flex"} do |f|
         %>
-    <%= f.input :content,
+      <%= f.input :content,
             label: false,
             placeholder: "Commentaire",
             wrapper_html: {class: "flex-grow-1"}
           %>
-    <%= f.submit "Envoyer", class: "btn btn-send btn-dark mb-3" %>
-    <% end %>
+      <%= f.submit "Envoyer", class: "btn btn-send btn-dark mb-3" %>
+      <% end %>
+    </div>
   </div>
-</div>
 
 
-<div class="container mb-5">
-  <div class="row d-flex justify-content-center align-items-center h-100 p-3 m-1">
-    <% @post.comments.each do |comment| %>
-    <div class="comment block">
+  <div class="container mb-5">
+    <div class="row d-flex justify-content-center align-items-center p-3">
+      <% @post.comments.each do |comment| %>
       <div class="d-flex">
-        <img class="card-img-top img-circle rounded-circle"
-          src="https://media.licdn.com/dms/image/D4D03AQEh19LSGxIO5w/profile-displayphoto-shrink_200_200/0/1681401337972?e=2147483647&v=beta&t=l8me4E87y2ZEbBu0hoqeTT3hs1PcPSaWEcBR4TXYu2Y"
-          alt="Card image cap" class="img-comment">
+        <img src=<%=comment.user.picture%> class="card-img-top img-circle rounded-circle" />
         <div class="card-block">
           <%= link_to comment.user.username, user_path(comment.user), class:"text-decoration-none wakely-font"%>
           <h4 class="comment-text card-text"> <%= comment.content %></h4>
-          <h6 class="date-time"><%= comment.created_at.strftime('%d.%m.%Y - %H:%M:%S') %></h6>
+        </div>
+        <div class="btn-supp">
+          <%if comment.user==current_user%>
+          <%= link_to comment_path(comment), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"link-supp" do %>
+          <i class="fa-solid fa-delete-left"></i>
+          <% end %>
+          <% end %>
         </div>
       </div>
-      <%if comment.user==current_user%>
-      <%= link_to "Supprimer le commentaire", comment_path(comment), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"link-supp" %>
-      <%end%>
+      <h6 class="date-time-comment mt-3"><%= comment.created_at.strftime('%d.%m.%Y - %H:%M:%S') %></h6>
     </div>
-    <% end %>
-  </div>
-</div>
+    <%end%>
 </div>
