@@ -17,13 +17,15 @@
     <%end%>
   </div>
 
-  <%= render "notification" %>
 
 
   <div class="row d-flex justify-content-center align-items-center h-100">
     <div class="col-md-12 col-xl-4">
         <div class=" card card-user text-center">
-          <div class="mt-2 mb-4">
+  <div class= "notif-icon">
+  <%= render "notification" %>
+  </div>
+          <div class="mb-4">
             <% if @user.picture? %>
             <img src=<%=@user.picture%> class="img-profil-bigger" />
             <%else%>
@@ -69,7 +71,6 @@
                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                   loading="lazy"></iframe>
               </div>
-            </div>
             <div class="date-time mx-1 wakely-font d-flex justify-content-start">
               <h6 class="mx-1"> <small><%=@user.last_post_day.created_at.strftime('%d.%m.%Y - %H:%M:%S')%></small></h6>
             </div>
@@ -80,6 +81,7 @@
               <%= link_to post_path(@user.last_post_day), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
               <i class="fa-solid fa-delete-left"></i>
               <% end %>
+            </div>
             </div>
             <br>
           </div>
@@ -113,15 +115,14 @@
                   <% end %>
                   </div>
                 </div>
-                <br>
+
               </div>
               <% end %>
-            </div>
 
+            </div>
+<br>
         </div>
       </div>
-      <br>
-      <br>
     </div>
   </div>
 </div>
