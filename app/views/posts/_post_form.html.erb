@@ -1,6 +1,6 @@
 <div data-controller="search-music" data-search-music-value=<%= search_music_path %>>
   <%= simple_form_for @post do |f| %>
-  <%= f.input :mood, label: "Comment te sens-tu ?", collection: Post::MOODS %>
+  <%= f.input :mood, label: "Comment te sens-tu ?",class:"radius", collection: Post::MOODS %>
   <%= f.input :search_music, label:'Choisis ta musique', input_html: { data: {
                                               search_music_target: "input",
                                               action: 'keyup->search-music#getTracks'
