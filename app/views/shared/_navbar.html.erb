@@ -1,18 +1,26 @@
 <nav class="navbar fixed-bottom d-flex justify-content-between">
   <% if user_signed_in? %>
-  <%= link_to posts_path do %>
-  <i class="fa-solid fa-house"></i>
-   <% end %>
-  <%= link_to user_path(current_user) do %>
-  <i class="fa-solid fa-user"></i>
-   <% end %>
-  <%= link_to posts_path do%>
 
-  <i class="fa-solid fa-plus" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+
+    <%= link_to posts_path do %>
+    <i class="fa-solid fa-house"></i>
+    <% end %>
+
+
+    <%= link_to user_path(current_user) do %>
+    <i class="fa-solid fa-user"></i>
+    <% end %>
+
+
+    <%= link_to posts_path do%>
+    <i class="fa-solid fa-plus" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+    <% end %>
+
+
+    <%= link_to user_friendships_path(current_user) do%>
+    <i class="fa-solid fa-user-group" ></i>
+    <% end %>
+
 
   <% end %>
-  <%= link_to user_friendships_path(current_user) do%>
-  <i class="fa-solid fa-user-group" ></i>
-  <% end %>
-<% end %>
 </nav>
