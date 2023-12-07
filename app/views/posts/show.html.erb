@@ -73,7 +73,11 @@
         </div>
         <div class="btn-supp">
           <%if comment.user==current_user%>
+<<<<<<< HEAD
           <%= link_to comment_path(comment), data: {turbo_method: :delete, turbo_confirm: "Etes-vous sûr?"}, class:"link-supp" do %>
+=======
+          <%= link_to comment_path(comment), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"link-supp" do %>
+>>>>>>> 439b3f4a4561bf588a6dcbd31ac184bbd8cfcc61
           <i class="fa-solid fa-delete-left"></i>
           <% end %>
           <% end %>
