@@ -30,7 +30,9 @@
           <h6> <small><%=friendship.receiver.last_post_day.created_at.strftime('%d/%m/%Y - %H:%M:%S')%></small></h6>
         </div>
         <div>
-        <h4><%= link_to "Ajouter un commentaire", post_path(friendship.receiver.last_post_day), class:"add_comment"%></h4>
+          <%= link_to post_path(friendship.receiver.last_post_day) , class:"add_comment" do %>
+            <i class="fa-solid fa-message"></i>
+          <% end %>
         </div>
         </div>
 
