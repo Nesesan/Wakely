@@ -75,6 +75,7 @@ img {
   transition-duration: .3s;
 }
 
+
 .Btn:hover .sign {
   width: 30%;
   transition-duration: .3s;
@@ -100,4 +101,8 @@ img {
   justify-content: start;
   margin-top: 5px;
   margin-left: 8px;
+}
+
+.btn-focus:focus {
+background-color: white;
 }

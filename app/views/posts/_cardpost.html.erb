@@ -33,17 +33,17 @@
           height="152" frameBorder="0" allowfullscreen=""
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
-    </div>
-  </div>
   <ul class="fixed-emoji-bar" data-emoji-picker-target="ul">
     <%= render "emoji_list", post: post %>
   </ul>
   <div class="date-emoji">
-    <div class="d-flex">
+    <div class="d-flex mx-2 my-2">
       <%= render "emoji_picker" %>
       <%= link_to post_path(post) , class:"add_comment" do %>
       <i class="fa-solid fa-message"></i>
       <% end %>
+  </div>
+    </div>
     </div>
   </div>
   <br>
