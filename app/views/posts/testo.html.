@@ -1,0 +1,16 @@
+  <div class="d-flex">
+        <img src=<%=comment.user.picture%> class="card-img-top img-circle rounded-circle" />
+        <div class="card-block">
+          <%= link_to comment.user.username, user_path(comment.user), class:"text-decoration-none wakely-font"%>
+          <h4 class="comment-text card-text"> <%= comment.content %></h4>
+        </div>
+        <div class="btn-supp">
+          <%if comment.user==current_user%>
+          <%= link_to comment_path(comment), data: {turbo_method: :delete, turbo_confirm: "Etes-vous sûr?"}, class:"link-supp" do %>
+          <i class="fa-solid fa-delete-left"></i>
+          <% end %>
+          <% end %>
+        </div>
+      </div>
+      <h6 class="date-time-comment mt-3"><%= comment.created_at.strftime('%d.%m.%Y - %H:%M:%S') %></h6>
+    </div>
