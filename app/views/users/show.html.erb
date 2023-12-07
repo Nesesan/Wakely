@@ -3,7 +3,7 @@
     <%= link_to root_path, class: "return-arrow " do %>
     <i class="fa-solid fa-chevron-left"></i>
     <% end %>
-    <h2 class= "wakely-font my-2 text-center ">Profil</h2>
+    <h2 class="wakely-font my-2 text-center ">Profil</h2>
     <%= link_to destroy_user_session_path, data: {turbo_method: :delete} do %>
     <button class="Btn">
       <div class="sign"><svg viewBox="0 0 512 512">
@@ -21,20 +21,9 @@
 
   <div class="row d-flex justify-content-center align-items-center h-100">
     <div class="col-md-12 col-xl-4">
-        <div class=" card card-user text-center">
-  <div class= "notif-icon">
-  <%= render "notification" %>
-  </div>
-          <div class="mb-4">
-            <% if @user.picture? %>
-            <img src=<%=@user.picture%> class="img-profil-bigger" />
-            <%else%>
-            <img
-              src="data:image/png;base64,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"
-              class="rounded-circle img-fluid" style="width: 100%; height: 100%" />
-            <% end %>
-          </div>
-          <h4 class="wakely-font mb-2"><%=@user.username%></h4>
+      <div class=" card card-user text-center">
+        <div class="notif-icon">
+          <%= render "notification" %>
         </div>
         <div class="d-flex justify-content-center mb-2">
           <% if @user != current_user %>
@@ -44,6 +33,16 @@
           <% end %>
           <% end %>
         </div>
+        <h4 class="wakely-font mb-2"><%=@user.username%></h4>
+      </div>
+      <div class="d-flex justify-content-center mb-2">
+        <% if @user != current_user %>
+        <%= simple_form_for [@user, @friendship] do |f| %>
+        <%= f.input :receiver_id,as: :hidden, input_html: { value: @user.id } %>
+        <%= f.submit "Suivre", class:" btn btn-outline-light rounded-pill" %>
+        <% end %>
+        <% end %>
+      </div>
 
     </div>
   </div>
@@ -51,77 +50,85 @@
     <div class="col-md-12 col-xl-4">
       <h4 class="wakely-font justify-content-center d-flex mt-2"><strong>Dernier post</strong></h4>
 
-        <div class=" card mt-3 card-body text-center">
-          <div class="post">
-            <div class="title-post">
-              <div class="profil-img-username d-flex flex-row align-items-end">
-                <div class="mood">
-                  <h6 class="wakely-font"><%= @user.username%> est dans un mood <%=@user.last_post_day.mood%></h6>
-                </div>
+      <div class=" card mt-3 card-body text-center">
+        <div class="post">
+          <div class="title-post">
+            <div class="profil-img-username d-flex flex-row align-items-end">
+              <div class="mood">
+                <h6 class="wakely-font"><%= @user.username%> est dans un mood <%=@user.last_post_day.mood%></h6>
               </div>
             </div>
-            <div class="main-post border border-dark">
-              <div class="content mx-3">
-                <p class="wakely-font content-post d-flex justify-content-start"><%= @user.last_post_day.content %></p>
+          </div>
+          <div class="main-post border border-dark">
+            <div class="content d-flex content-post d-flex justify-content-between">
+              <p class="blablabla wakely-font d-flex "><%= @user.last_post_day.content %></p>
+              <div class="cross-btn">
+                <%= link_to post_path(@user.last_post_day), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+                <i class="fa-solid fa-xmark"></i>
+                <% end %>
               </div>
-              <div class="track">
-                <iframe style="border-radius:12px"
-                  src=<%="https://open.spotify.com/embed/track/#{@user.last_post_day.track_id}?utm_source=generator"%>
-                  width="100%" height="152" frameBorder="0" allowfullscreen=""
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                  loading="lazy"></iframe>
-              </div>
+            </div>
+            <div class="track">
+              <iframe style="border-radius:12px"
+                src=<%="https://open.spotify.com/embed/track/#{@user.last_post_day.track_id}?utm_source=generator"%>
+                width="100%" height="152" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
+            </div>
             <div class="date-time mx-1 wakely-font d-flex justify-content-start">
               <h6 class="mx-1"> <small><%=@user.last_post_day.created_at.strftime('%d.%m.%Y - %H:%M:%S')%></small></h6>
             </div>
             <div class="d-flex justify-content-between">
-             <%= link_to post_path(@user.last_post_day) do%>
-             <i class="fa-solid fa-message"></i>
-             <% end %>
-              <%= link_to post_path(@user.last_post_day), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
-              <i class="fa-solid fa-delete-left"></i>
+              <%= link_to post_path(@user.last_post_day) do%>
+              <i class="fa-solid fa-message icon-comment-user"></i>
               <% end %>
+
             </div>
-            </div>
-            <br>
           </div>
+          <br>
         </div>
+      </div>
 
       <div class="row d-flex justify-content-center h-100 mt-3">
         <div class="col-md-12">
           <h4 class=" wakely-font d-flex justify-content-center"><strong>Memories</strong></h4>
 
-            <div class="card card-body">
-              <% @last_posts.each do |post| %>
-              <div class="main-post">
-                <div class="track">
-                  <iframe style="border-radius:12px"
-                    src=<%="https://open.spotify.com/embed/track/#{post.track_id}?utm_source=generator"%> width="100%"
-                    height="152" frameBorder="0" allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"></iframe>
-                </div>
-                <div class="date-time mx-1 wakely-font d-flex justify-content-start">
-                  <h6 class="mx-1"> <small><%=@user.last_post_day.created_at.strftime('%d.%m.%Y - %H:%M:%S')%></small>
-                  </h6>
-                </div>
-                <div>
-             <div class="d-flex justify-content-between">
-                    <%= link_to post_path(@user.last_post_day) do%>
-             <i class="fa-solid fa-message"></i>
-                   <% end %>
-                  <%= link_to post_path(@user.last_post_day), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
-                  <i class="fa-solid fa-delete-left"></i>
-                  <% end %>
-                  </div>
-                </div>
-
+          <div class="card card-body">
+            <% @last_posts.each do |post| %>
+            <div class="main-post">
+              <div class="cross-btn">
+                <%= link_to post_path(@user.last_post_day), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+                <i class="fa-solid fa-xmark fa-xmark-memories"></i>
+                <% end %>
               </div>
-              <% end %>
+              <div class="track">
+                <iframe style="border-radius:12px"
+                  src=<%="https://open.spotify.com/embed/track/#{post.track_id}?utm_source=generator"%> width="100%"
+                  height="152" frameBorder="0" allowfullscreen=""
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"></iframe>
+              </div>
+              <div class="date-time mx-1 wakely-font d-flex justify-content-start">
+                <h6 class="mx-1"> <small><%=@user.last_post_day.created_at.strftime('%d.%m.%Y - %H:%M:%S')%></small>
+                </h6>
+              </div>
+              <div>
+                <div class="d-flex justify-content-left">
+                  <%= link_to post_path(@user.last_post_day) do%>
+                  <i class="fa-solid fa-message icon-comment-user"></i>
+                  <% end %>
+                </div>
+              </div>
 
             </div>
+
+            <% end %>
+
+          </div>
+          <br>
 <br>
 <br>
+
         </div>
       </div>
     </div>
